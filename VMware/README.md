@@ -1,6 +1,6 @@
 # VMware Notes
 
-## Partitioning
+## Adding Storage (Linux)
 1. Clean machine with no snapshot required
 
 2. VM > Settings > Hard Disk (SCSI) > Expand ...
