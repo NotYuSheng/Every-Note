@@ -10,7 +10,7 @@ df -h
 watch -n 1 <command-here>
 ```
 
-### Move large file with progress bar
+### Move large directory with progress bar
 ```
-rsync --progress /path/to/largefile /destination/path/
+rsync -r --progress /path/to/largefile /destination/path/
 ```
