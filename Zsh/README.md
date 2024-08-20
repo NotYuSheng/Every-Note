@@ -11,6 +11,7 @@ watch -n 1 <command-here>
 ```
 
 ### Move large directory with progress bar
+Don't need to define new folder name in new path
 ```
-rsync -r --progress /path/to/largefile /destination/path/
+sudo rsync -r --progress /source/large-directory /destination/new-folder-name/
 ```
