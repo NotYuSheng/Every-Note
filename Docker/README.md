@@ -56,6 +56,21 @@ List volume(s)
 docker volume ls
 ```
 
+Save a Docker Container as an image
+```
+docker commit <container-id> <image-name>
+```
+
+Save the image to a tar file
+```
+docker save -o <file-name>.tar <image-name>
+```
+
+Load the Docker image from the tar file
+```
+docker load -i <file-name>.tar
+```
+
 ## Docker-compose
 Build the Docker image(s):
 ```
