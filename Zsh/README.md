@@ -1,5 +1,10 @@
 # Zsh-Cheatsheet
 
+### deb Install
+```
+sudo dpkg -i <deb-package>
+```
+
 ### View disk usage
 ```
 df -h
