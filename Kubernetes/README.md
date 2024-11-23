@@ -29,6 +29,16 @@ minikube status
 kubectl get nodes
 ```
 
+## Check the Pod events
+```
+kubectl describe pod <pod-name>
+```
+
+## View Pod logs
+```
+kubectl logs <pod-name>
+```
+
 ## Access Kubernetes Dashboard
 ```
 minikube dashboard
