@@ -19,6 +19,9 @@ minikube stop
 minikube delete
 ```
 
+## Get shell in pod
+kubectl exec -it <pod-name> -- <command>
+
 ## Check cluster status
 ```
 minikube status
