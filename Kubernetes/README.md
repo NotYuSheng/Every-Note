@@ -39,6 +39,16 @@ kubectl describe pod <pod-name>
 kubectl logs <pod-name>
 ```
 
+## Delete all pods in all namespace
+```
+kubectl delete pods --all --all-namespaces
+```
+
+## Delete all pods in specific namespace
+```
+kubectl delete namespace <namespace-name>
+```
+
 ## Access Kubernetes Dashboard
 ```
 minikube dashboard
