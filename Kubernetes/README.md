@@ -24,9 +24,9 @@ minikube delete
 minikube status
 ```
 
-## List available nodes
+## List available nodes in namespace
 ```
-kubectl get nodes
+kubectl get nodes -n <namespace>
 ```
 
 ## Check the Pod events
