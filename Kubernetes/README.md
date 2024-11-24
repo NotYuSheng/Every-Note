@@ -39,9 +39,9 @@ kubectl describe pod <pod-name>
 kubectl logs <pod-name>
 ```
 
-## Delete all pods in all namespace
+## Permanently stop and delete the Pods
 ```
-kubectl delete pods --all --all-namespaces
+kubectl delete deployment --all --all-namespaces
 ```
 
 ## Delete all pods in specific namespace
