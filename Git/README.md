@@ -1,12 +1,31 @@
 # Git-Cheatsheet
 
-### Configure username & email
+## Store credentials without pulling repo (Manually)
+1. Configure username & email
 ```
 git config --global user.name "your-username"
 git config --global user.email "your-email"
 ```
 
-### Store credentials
+2. Configure credentials file
+```
+nano ~/.git-credentials
+```
+```
+https://<your-username>:<your-PAT>@github.com
+```
+
+3. Set permission
+```
+chmod 600 ~/.git-credentials
+```
+
+4. Configure git to use `store` with credential file
+```
+git config --global credential.helper "store --file ~/.git-credentials"
+```
+
+### Store credentials with existing repo
 ```
 git config --global credential.helper store
 git pull
