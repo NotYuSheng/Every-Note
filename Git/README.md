@@ -25,6 +25,41 @@ chmod 600 ~/.git-credentials
 git config --global credential.helper "store --file ~/.git-credentials"
 ```
 
+## Uploading Large file
+1. Install Git and Git LFS
+```
+sudo apt update
+sudo apt install git git-lfs
+```
+
+2. Configure Git LFS
+```
+git lfs install
+```
+
+3. Clone Your Repository
+```
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+```
+
+4. Track Large Files
+```
+git lfs track "*.zip"
+```
+
+5. Add and Commit Your Large File
+```
+git add path/to/your/large-file.zip
+git commit -m "Add large file"
+```
+
+6. Push to GitHub
+```
+git push origin main
+```
+
+## General
 ### Store credentials with existing repo
 ```
 git config --global credential.helper store
@@ -68,41 +103,7 @@ git restore --staged your-file
 git clone https://github.com/your-username/your-repository.git
 ```
 
-## Add Remote Repository
+### Add Remote Repository
 ```
 git remote add origin https://github.com/your-username/your-repository
-```
-
-## Uploading Large file
-### Step 1: Install Git and Git LFS
-```
-sudo apt update
-sudo apt install git git-lfs
-```
-
-### Step 2: Configure Git LFS
-```
-git lfs install
-```
-
-### Step 3: Clone Your Repository
-```
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
-```
-
-### Step 4: Track Large Files
-```
-git lfs track "*.zip"
-```
-
-### Step 5: Add and Commit Your Large File
-```
-git add path/to/your/large-file.zip
-git commit -m "Add large file"
-```
-
-### Step 6: Push to GitHub
-```
-git push origin main
 ```
