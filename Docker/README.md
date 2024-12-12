@@ -77,10 +77,13 @@ Build the Docker image(s):
 docker-compose build
 ```
 
-Run image(s)
+## Run image(s)
 ```
 docker-compose up -d
 ```
+
+## Remove all images without at least one container associated to them
+docker image prune -a
 
 ## Common Issue(s):
 ### Error: 
