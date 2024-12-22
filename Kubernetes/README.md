@@ -1,4 +1,5 @@
 # Kubernetes-Cheatsheet
+## Cluster
 ### Starts a Minikube cluster
 ```
 minikube start
@@ -19,11 +20,28 @@ minikube stop
 minikube delete
 ```
 
+## Pod
+### List pods
+```
+kubectl get pods
+```
+
+### Create pod described using yaml
+```
+kubectl run <pod-name> --image=<image-name> --restart=Never --dry-run=client -n <namespace> -o yaml > <pod-filename.yaml>
+```
+
+## Stop pod
+```
+kubectl delete pod <pod-name>
+```
+
 ### Get shell in pod
 ```
 kubectl exec -it <pod-name> -- <command>
 ```
 
+## General
 ### Check cluster status
 ```
 minikube status
