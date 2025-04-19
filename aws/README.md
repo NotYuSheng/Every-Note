@@ -1,7 +1,33 @@
 # AWS
 
+## ECR
+1. Create AWS repository
+```bash
+aws ecr create-repository --repository-name <repo-name>
+```
+
+2. Authenticate Docker with ECR
+```bash
+aws ecr get-login-password --region <region> | \
+  docker login --username AWS --password-stdin <your_account_id>.dkr.ecr.<region>.amazonaws.com
+```
+
+> Region Singapore: ap-southeast-1
+
+3. Tag Your Image for ECR
+```bash
+docker tag <repo-name>:latest <your_account_id>.dkr.ecr.<region>.amazonaws.com/<repo-name>:latest
+```
+
+4. Push the Image to ECR
+```bash
+docker push <your_account_id>.dkr.ecr.<region>.amazonaws.com/<repo-name>:latest
+```
+
 ## EC2 - Deploying Docker Project
-1. ssh into EC2 instance
+
+### Guide for Ubuntu Setup, username change and step 2 change if using another OS
+1. Ssh into EC2 instance
 ```bash
 ssh -i your-key.pem ubuntu@<your-public-ip>
 ```
