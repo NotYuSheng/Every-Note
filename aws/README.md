@@ -1,6 +1,6 @@
 # AWS
 
-## ECR
+## ECR - Pushing Docker Image
 1. Create AWS repository
 ```bash
 aws ecr create-repository --repository-name <repo-name>
