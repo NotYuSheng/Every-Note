@@ -1,5 +1,22 @@
 # Git-Cheatsheet
 
+## Commit convention
+
+| Type          | When to use it                                                                    |
+| ------------- | --------------------------------------------------------------------------------- |
+| **feat:**     | Introducing a new feature                                                         |
+| **fix:**      | A bug fix                                                                         |
+| **docs:**     | Documentation only changes                                                        |
+| **style:**    | Formatting, missing semicolons, whitespace, etc.                                  |
+| **refactor:** | Code changes that neither fixes a bug nor adds a feature (e.g. restructuring)     |
+| **perf:**     | A code change that improves performance                                           |
+| **test:**     | Adding missing tests or correcting existing ones                                  |
+| **build:**    | Changes that affect the build system or external dependencies (e.g. webpack, npm) |
+| **ci:**       | CI configuration files and scripts (e.g. GitHub Actions, Travis)                  |
+| **chore:**    | Other changes that don’t modify src or test files (e.g. repo cleanup, tooling)    |
+| **revert:**   | Reverts a previous commit                                                         |
+
+
 ## Store credentials without pulling repo (Manually)
 1. Configure username & email
 ```
