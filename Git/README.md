@@ -73,6 +73,11 @@ squash c11 feat: Add JWT helper
 squash c12 hotfix: Fix typo in auth
 ```
 
+### Rebase abort
+```
+git rebase --abort
+```
+
 ## Store credentials without pulling repo (Manually)
 1. Configure username & email
 ```
