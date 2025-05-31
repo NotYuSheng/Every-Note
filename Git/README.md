@@ -16,6 +16,62 @@
 | **chore:**    | Other changes that don’t modify src or test files (e.g. repo cleanup, tooling)    |
 | **revert:**   | Reverts a previous commit                                                         |
 
+## Squashing commits
+1. Check your commit history
+```
+git log --oneline
+```
+
+2. Find the merge base
+```
+git merge-base main HEAD
+```
+This gives you the commit hash where your branch split from `main`.
+
+3. Rebase interactively from that commit
+```
+git rebase -i $(git merge-base main HEAD)
+```
+
+4. PR and Merge
+
+Best Practice:
+If your branch is clean after a squash, merge your PR right away to finalize the work.
+Treat this as a checkpoint before continuing further development.
+
+### Group and sqash accordingly
+Before
+```
+pick c12 Fix typo in auth
+pick c11 Add JWT helper
+pick c10 Handle expired token
+pick c9  Docker volume fix
+pick c8  Add Dockerfile
+pick c7  Hot reload config
+pick c6  Add /register endpoint
+pick c5  Add password hashing
+pick c4  Add /login endpoint
+pick c3  Setup routes
+pick c2  Init Flask app
+pick c1  Init project structure
+```
+After
+```
+pick c1 chore: Init project structure  
+squash c2 chore: Init Flask app  
+squash c3 chore: Setup routes  
+
+pick c4 feat: Add /login endpoint  
+squash c5 feat: Add password hashing  
+squash c6 feat: Add /register endpoint  
+
+pick c7 chore: Enable hot reload config  
+squash c8 chore: Add Dockerfile  
+squash c9 fix: Fix Docker volume binding  
+squash c10 fix: Handle expired JWT token  
+squash c11 feat: Add JWT helper  
+squash c12 hotfix: Fix typo in auth
+```
 
 ## Store credentials without pulling repo (Manually)
 1. Configure username & email
@@ -113,11 +169,6 @@ git push -u origin main
 ### Unstage (remove from commit before pushing)
 ```
 git restore --staged your-file
-```
-
-### Clone
-```
-git clone https://github.com/your-username/your-repository.git
 ```
 
 ### Add Remote Repository
