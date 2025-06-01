@@ -149,9 +149,14 @@ git pull
 git init
 ```
 
-### Branch
+### Create new branch
 ```
-git branch -m your-branch
+git branch -b your-branch
+```
+
+### Current changes
+```
+git status
 ```
 
 ### Adding files
